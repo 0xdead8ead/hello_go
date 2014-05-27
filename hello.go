@@ -1,13 +1,8 @@
+/* My First Go at Go! */
 package main
 
 import "fmt"
 import "net"
-
-/*
-
-My First Go App
-
-*/
 
 func main() {
 	// Get interfaces
