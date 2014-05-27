@@ -10,18 +10,17 @@ My First Go App
 */
 
 func main() {
-	fmt.Printf("Hello, world.\n")
-	//addresses, err := net.InterfaceAddrs()
+	// Get interfaces
 	interfaces, err := net.Interfaces()
 
+	// Interate over interfaces
 	for index := 0; index < len(interfaces); index++ {
 		if err == nil {
-
 			address, othererr := interfaces[index].Addrs()
 			if othererr == nil {
-				fmt.Printf("\nInterface: %s\tAddress: %s", interfaces[index].Name, address)
+				// Print out Address Information
+				fmt.Printf("Interface: %s\tAddress: %s\n", interfaces[index].Name, address)
 			}
 		}
 	}
-	fmt.Printf("%s", err)
 }
