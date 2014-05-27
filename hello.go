@@ -16,6 +16,7 @@ func main() {
 	// Interate over interfaces
 	for index := 0; index < len(interfaces); index++ {
 		if err == nil {
+			// Grab the current interface address
 			address, othererr := interfaces[index].Addrs()
 			if othererr == nil {
 				// Print out Address Information
